@@ -1,0 +1,33 @@
+{
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite --host --mode",
+        "build": "vue-tsc --noEmit && vite build --mode",
+        "serve": "vite preview --host",
+        "start": "npm run dev"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "jsonp": "^0.2.1",
+        "qs": "^6.10.1",
+        "vue": "^3.0.5"
+    },
+    "devDependencies": {
+        "@types/jsonp": "^0.2.0",
+        "@types/node": "^15.12.4",
+        "@types/qs": "^6.9.6",
+        "@vitejs/plugin-legacy": "^1.6.2",
+        "@vitejs/plugin-vue": "^1.2.3",
+        "@vue/compiler-sfc": "^3.0.5",
+        "crypto": "^1.0.1",
+        "dotenv": "^10.0.0",
+        "less": "^4.1.1",
+        "lib-flexible": "^0.3.2",
+        "magic-string": "^0.25.7",
+        "postcss-pxtorem": "^6.0.0",
+        "typescript": "^4.3.2",
+        "vite": "^2.3.8",
+        "vite-plugin-style-import": "^1.0.1",
+        "vue-tsc": "^0.0.24"
+    }
+}

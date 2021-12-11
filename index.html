@@ -1,0 +1,62 @@
+<!--
+ * @Description: 
+ * @Autor: weipengfei
+ * @Date: 2021-07-02 15:14:44
+ * @LastEditors: weipengfei
+ * @LastEditTime: 2021-10-11 20:24:25
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum=scale=1.0">
+    <title>Vite App</title>
+    <script type="text/javascript">
+        (function(win, doc) {
+            var docEl = doc.documentElement;
+
+            function setRemUnit() {
+                var docWidth = docEl.clientWidth;
+                var rem = docWidth / 10;
+                docEl.style.fontSize = rem + "px";
+            }
+
+            win.addEventListener(
+                "resize",
+                function() {
+                    setRemUnit();
+                },
+                false
+            );
+            win.addEventListener(
+                "pageshow",
+                function(e) {
+                    if (e.persisted) {
+                        setRemUnit();
+                    }
+                },
+                false
+            );
+            setRemUnit();
+            if (win.devicePixelRatio && win.devicePixelRatio >= 2) {
+                var testEl = doc.createElement("div");
+                var fakeBody = doc.createElement("body");
+                // testEl.style.border = '0.5px solid transparent';
+                fakeBody.appendChild(testEl);
+                docEl.appendChild(fakeBody);
+                if (testEl.offsetHeight === 1) {
+                    docEl.classList.add("hairlines");
+                }
+                docEl.removeChild(fakeBody);
+            }
+        })(window, document);
+    </script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="module" src="/src/views/app/main.ts"></script>
+</body>
+
+</html>

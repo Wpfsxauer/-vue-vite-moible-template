@@ -1,0 +1,2 @@
+VITE_IS_WATCH = true
+VITE_IS_LEGACY = false
